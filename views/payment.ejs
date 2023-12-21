@@ -1,0 +1,159 @@
+<%- include("./partials/header") -%>
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header">
+        <h1 class="display-3 text-uppercase text-white mb-3">Car Booking</h1>
+        <div class="d-inline-flex text-white">
+            <h6 class="text-uppercase m-0"><a class="text-white" href="">Home</a></h6>
+            <h6 class="text-body m-0 px-3">/</h6>
+            <h6 class="text-uppercase text-body m-0">Car Booking</h6>
+        </div>
+    </div>
+    <!-- Page Header Start -->
+
+
+    <!-- Detail Start -->
+    <div class="container-fluid pt-5">
+        <div class="container pt-5 pb-3">
+            <h1 class="display-4 text-uppercase mb-5"><%=selectedCar.name%></h1>
+            <div class="row align-items-center pb-2">
+                <div class="col-lg-6 mb-4">
+                    <img class="img-fluid" src="<%=selectedCar.image%>" alt="">
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h4 class="mb-2">$<%=selectedCar.price%>/Day</h4>
+                    <div class="d-flex mb-3">
+                        <h6 class="mr-2">Rating:</h6>
+                        <div class="d-flex align-items-center justify-content-center mb-1">
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
+                            <small>(250)</small>
+                        </div>
+                    </div>
+                    <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt</p>
+                    <div class="d-flex pt-1">
+                        <h6>Share on:</h6>
+                        <div class="d-inline-flex">
+                            <a class="px-2" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="px-2" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="px-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="px-2" href=""><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-n3 mt-lg-0 pb-4">
+                <div class="col-md-3 col-6 mb-2">
+                    <i class="fa fa-car text-primary mr-2"></i>
+                    <span>Model: <%=selectedCar.year%></span>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <i class="fa fa-cogs text-primary mr-2"></i>
+                    <span>Automatic</span>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <i class="fa fa-road text-primary mr-2"></i>
+                    <span><%=selectedCar.distance%>km/liter</span>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <i class="fa fa-eye text-primary mr-2"></i>
+                    <span>GPS Navigation</span>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <i class="fa fa-car text-primary mr-2"></i>
+                    <span>Model: <%=selectedCar.year%></span>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <i class="fa fa-cogs text-primary mr-2"></i>
+                    <span>Automatic</span>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <i class="fa fa-road text-primary mr-2"></i>
+                    <span><%=selectedCar.distance%>km/liter</span>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <i class="fa fa-eye text-primary mr-2"></i>
+                    <span>GPS Navigation</span>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <i class="fa fa-car text-primary mr-2"></i>
+                    <span>Model: <%=selectedCar.year%></span>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <i class="fa fa-cogs text-primary mr-2"></i>
+                    <span>Automatic</span>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <i class="fa fa-road text-primary mr-2"></i>
+                    <span><%=selectedCar.distance%>km/liter</span>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <i class="fa fa-eye text-primary mr-2"></i>
+                    <span>GPS Navigation</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Detail End -->
+
+
+    <!-- Car Booking Start -->
+    <div class="container-fluid pb-5">
+        <div class="container">
+            <div class="row">
+               
+                    <div class="col-lg-4" style="margin:auto;">
+                        <div class="bg-secondary p-5 mb-5">
+                            <h2 class="text-primary mb-4">Payment</h2>
+                            <form action="/payments" method="post">
+                                <input type="hidden" name="name" value="<%=selectedCar.name%>">
+                                <input type="hidden" name="price" value="<%=selectedCar.price%>">
+                                <input class="form-control" type="text" name="email" placeholder="Enter registered email" style="margin-bottom: 10px;">
+                                <button id="checkout-button" class="btn btn-block btn-primary py-3">Reserve Now</button>
+                            </form>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Car Booking End -->
+
+
+    <!-- Vendor Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="owl-carousel vendor-carousel">
+                <div class="bg-light p-4">
+                    <img src="img/vendor-1.png" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-2.png" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-3.png" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-4.png" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-5.png" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-6.png" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-7.png" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-8.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor End -->
+
+<%- include("./partials/footer") -%>
